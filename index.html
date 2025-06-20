@@ -26,611 +26,661 @@
   <link href="images/webclip.webp" rel="apple-touch-icon">
   <!-- Google reCAPTCHA script -->
   <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
+  <!-- Custom CSS for Contact Button -->
+  <style>
+    /* New separate class for the Contact Us button */
+    .cta-contact-button {
+      display: block;
+      width: 100%;
+      max-width: 600px; /* Increased from 500px */
+      padding: 25px 50px; /* Increased from 20px 40px */
+      font-size: 20px; /* Increased from 18px */
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      background-color: rgb(164, 218, 167);
+      color: #000000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+      letter-spacing: 0.5px;
+      margin: 0 auto;
+    }
+
+    .cta-contact-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgb(0, 128, 51);
+      background-color: rgb(193, 228, 196);
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .cta-contact-button:active {
+      transform: scale(0.80);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 767px) {
+      .cta-contact-button {
+        max-width: 100%;
+        padding: 20px 30px;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .cta-contact-button {
+        padding: 18px 25px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body class="body">
-  <div data-animation="default" class="navbar default-copy w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="06ab6c64-468c-b44e-1b8c-856deb96ba7f" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
-    <a href="index.html" aria-current="page" class="logo-link-wrapper w-nav-brand w--current"><img sizes="(max-width: 479px) 98vw, (max-width: 767px) 99vw, (max-width: 1015px) 100vw, 1015px" height="Auto" alt="" src="images/Messay-Logo-Text-1.png" loading="eager" srcset="images/Messay-Logo-Text-1-p-500.png 500w, images/Messay-Logo-Text-1-p-800.png 800w, images/Messay-Logo-Text-1.png 1015w" class="logo"></a>
-    <div class="nav-container w-container">
-      <nav role="navigation" class="nav-menu w-nav-menu">
-        <div class="nav-link-wrapper">
-          <a href="index.html" aria-current="page" class="nav-link w-nav-link w--current">Home</a>
-          <a href="index.html" aria-current="page" class="nav-link move-down hide-on-tab w-nav-link w--current">Home</a>
-        </div>
-        <div class="nav-link-wrapper">
-          <a href="index.html" aria-current="page" class="nav-link w-nav-link w--current">FAQ</a>
-          <a href="index.html#FAQ" class="nav-link move-down hide-on-tab w-nav-link">FAQ</a>
-        </div>
-        <div class="nav-link-wrapper">
-          <a href="game.html" class="nav-link w-nav-link">Game</a>
-          <a href="game.html" class="nav-link move-down hide-on-tab w-nav-link">Game</a>
-        </div>
-        <div class="nav-link-wrapper">
-          <a href="index.html#Expo-2025" class="nav-link w-nav-link">EXPO</a>
-          <a href="index.html#Expo-2025" class="nav-link move-down hide-on-tab w-nav-link">EXPO</a>
-        </div>
-        <div class="nav-link-wrapper">
-          <a href="index.html#Contact-Form" class="nav-link w-nav-link">Contact</a>
-          <a href="index.html#Contact-Form" class="nav-link move-down hide-on-tab w-nav-link">Contact</a>
-        </div>
-      </nav>
-      <div class="menu-button w-nav-button">
-        <div class="burger-icon w-icon-nav-menu"></div>
+<div data-animation="default" class="navbar default-copy w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="06ab6c64-468c-b44e-1b8c-856deb96ba7f" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
+  <a href="index.html" aria-current="page" class="logo-link-wrapper w-nav-brand w--current"><img sizes="(max-width: 479px) 98vw, (max-width: 767px) 99vw, (max-width: 1015px) 100vw, 1015px" height="Auto" alt="" src="images/Messay-Logo-Text-1.png" loading="eager" srcset="images/Messay-Logo-Text-1-p-500.png 500w, images/Messay-Logo-Text-1-p-800.png 800w, images/Messay-Logo-Text-1.png 1015w" class="logo"></a>
+  <div class="nav-container w-container">
+    <nav role="navigation" class="nav-menu w-nav-menu">
+      <div class="nav-link-wrapper">
+        <a href="index.html" aria-current="page" class="nav-link w-nav-link w--current">Home</a>
+        <a href="index.html" aria-current="page" class="nav-link move-down hide-on-tab w-nav-link w--current">Home</a>
       </div>
+      <div class="nav-link-wrapper">
+        <a href="index.html" aria-current="page" class="nav-link w-nav-link w--current">FAQ</a>
+        <a href="index.html#FAQ" class="nav-link move-down hide-on-tab w-nav-link">FAQ</a>
+      </div>
+      <div class="nav-link-wrapper">
+        <a href="game.html" class="nav-link w-nav-link">Game</a>
+        <a href="game.html" class="nav-link move-down hide-on-tab w-nav-link">Game</a>
+      </div>
+      <div class="nav-link-wrapper">
+        <a href="index.html#Expo-2025" class="nav-link w-nav-link">EXPO</a>
+        <a href="index.html#Expo-2025" class="nav-link move-down hide-on-tab w-nav-link">EXPO</a>
+      </div>
+      <div class="nav-link-wrapper">
+        <a href="index.html#Contact-Form" class="nav-link w-nav-link">Contact</a>
+        <a href="index.html#Contact-Form" class="nav-link move-down hide-on-tab w-nav-link">Contact</a>
+      </div>
+    </nav>
+    <div class="menu-button w-nav-button">
+      <div class="burger-icon w-icon-nav-menu"></div>
     </div>
   </div>
-  <section id="Home-Section" class="section">
-    <div class="w-layout-blockcontainer metrices padding-4-5rem w-container">
-      <div class="space-7rem"></div>
-      <div class="hero-wrapper">
-        <div data-w-id="fde0b76f-a031-ae9a-d039-aadd4b3a4614" style="opacity:0" class="hero-block background-blur">
+</div>
+<section id="Home-Section" class="section">
+  <div class="w-layout-blockcontainer metrices padding-4-5rem w-container">
+    <div class="space-7rem"></div>
+    <div class="hero-wrapper">
+      <div data-w-id="fde0b76f-a031-ae9a-d039-aadd4b3a4614" style="opacity:0" class="hero-block background-blur">
+        <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
+          <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/Group-564.svg" loading="eager" class="icon"></div>
+          <h5>Messay Tech</h5>
+        </div>
+        <h1 class="hero-title flip-from-bottom-animation">Mobile<br><span class="italics">eye tracking</span></h1>
+        <p data-w-id="4e4e284a-37f6-9a2d-2fe7-4e431e805bab" style="opacity:0" class="max-width-30rem">Our apps are developed to improve the daily lives of bedridden patients with ALS, muscular dystrophy, and other serious illnesses, as well as their families and caregivers.</p>
+        <a href="https://messay.ndk-group.co.jp/en/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
+          <p class="button-text">Explore</p>
+          <p class="button-text move-down hide-on-tab">Explore</p>
+          <div class="circle-absolute"></div>
+        </a>
+      </div>
+      <div data-w-id="e9eeb996-e4cd-19c8-a606-d06cc6cb9c04" style="opacity:0" class="hero-image"></div>
+    </div>
+    <div class="space-7rem"></div>
+  </div>
+</section>
+<section class="rt-component-section-2">
+  <a href="game.html" class="link-wrapper w-inline-block">
+    <div data-w-id="8b75b403-6bba-5cb6-1785-a5656c835051" class="w-layout-blockcontainer rt-home-one-marquee-section rt-overflow-hidden rt-component-container-2 w-container">
+      <div class="rt-marquee-wrapper">
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
+      </div>
+      <div class="rt-home-marquee-two">
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-hflex rt-marquee-train-3">
+          <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
+          <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+          <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
+          <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+        </div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-hflex rt-marquee-train-3">
+          <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
+          <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+          <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
+          <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+        </div>
+        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-hflex rt-marquee-train-3">
+          <div class="rt-marquee-text-2">Game</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
+          <div class="rt-marquee-text-2">Expo 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+          <div class="rt-marquee-text-2">Game</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
+          <div class="rt-marquee-text-2">Expo 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </a>
+</section>
+<section id="OurApps" class="section">
+  <div class="w-layout-blockcontainer metrices padding-4-5rem w-container">
+    <div id="explore" class="card-flex">
+      <div class="features-image-wrapper flip-from-left-animation"><img width="480.5" sizes="(max-width: 767px) 100vw, 480.5px" alt="" src="images/Messay-Feature-Image-1.webp" loading="eager" srcset="images/Messay-Feature-Image-1-p-500.webp 500w, images/Messay-Feature-Image-1-p-800.webp 800w, images/Messay-Feature-Image-1.webp 961w" class="features-image">
+        <div class="pop-up-card top-right background-blur">
+          <h4>Speak</h4>
+          <p>By Sight</p>
+        </div>
+      </div>
+      <div class="large-card">
+        <div class="card-text-block slide-from-right-animation">
           <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
-            <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/Group-564.svg" loading="eager" class="icon"></div>
-            <h5>Messay Tech</h5>
+            <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/Figma-App-SVG-1771.svg" loading="eager" class="icon"></div>
+            <h5>Messay</h5>
           </div>
-          <h1 class="hero-title flip-from-bottom-animation">Mobile<br><span class="italics">eye tracking</span></h1>
-          <p data-w-id="4e4e284a-37f6-9a2d-2fe7-4e431e805bab" style="opacity:0" class="max-width-30rem">Our apps are developed to improve the daily lives of bedridden patients with ALS, muscular dystrophy, and other serious illnesses, as well as their families and caregivers.</p>
-          <a href="https://messay.ndk-group.co.jp/en/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
+          <h2>Talk <span class="italics">With your eyes.</span></h2>
+          <p class="max-width-30rem">Messay is an eye and face controlled app that reads out selected/typed messages using synthetic voice.</p>
+          <a href="https://messay.ndk-group.co.jp/en/messay/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
             <p class="button-text">Explore</p>
             <p class="button-text move-down hide-on-tab">Explore</p>
             <div class="circle-absolute"></div>
           </a>
         </div>
-        <div data-w-id="e9eeb996-e4cd-19c8-a606-d06cc6cb9c04" style="opacity:0" class="hero-image"></div>
       </div>
-      <div class="space-7rem"></div>
     </div>
-  </section>
-  <section class="rt-component-section-2">
-    <a href="game.html" class="link-wrapper w-inline-block">
-      <div data-w-id="8b75b403-6bba-5cb6-1785-a5656c835051" class="w-layout-blockcontainer rt-home-one-marquee-section rt-overflow-hidden rt-component-container-2 w-container">
-        <div class="rt-marquee-wrapper">
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="rt-marquee-big-text">COOK WITH GAZE ||</div>
-        </div>
-        <div class="rt-home-marquee-two">
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-hflex rt-marquee-train-3">
-            <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
-            <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
-            <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
-            <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
+    <div class="space-7rem"></div>
+    <div class="card-flex reverse-on-tab">
+      <div class="large-card">
+        <div class="card-text-block slide-from-left-animation">
+          <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
+            <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/Union.png" loading="eager" class="icon"></div>
+            <h5>Mezic</h5>
           </div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-hflex rt-marquee-train-3">
-            <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
-            <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
-            <div class="rt-marquee-text-2">GAME</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
-            <div class="rt-marquee-text-2">EXPO 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
-          </div>
-          <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="w-layout-hflex rt-marquee-train-3">
-            <div class="rt-marquee-text-2">Game</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
-            <div class="rt-marquee-text-2">Expo 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
-            <div class="rt-marquee-text-2">Game</div><img width="39" height="39" alt="" src="images/Union.png" loading="lazy">
-            <div class="rt-marquee-text-2">Expo 2025</div><img width="39" height="39" alt="" src="images/Figma-App-SVG-1771.svg" loading="lazy">
-          </div>
+          <h2>Hands-free <span class="italics">Smartphone</span></h2>
+          <p class="max-width-30rem">Mezic is an app, which enables you to control your entire smartphone with your eyes and face.</p>
+          <a href="https://messay.ndk-group.co.jp/en/mezic/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
+            <p class="button-text">Explore</p>
+            <p class="button-text move-down hide-on-tab">Explore</p>
+            <div class="circle-absolute"></div>
+          </a>
         </div>
       </div>
-    </a>
-  </section>
-  <section id="OurApps" class="section">
-    <div class="w-layout-blockcontainer metrices padding-4-5rem w-container">
-      <div id="explore" class="card-flex">
-        <div class="features-image-wrapper flip-from-left-animation"><img width="480.5" sizes="(max-width: 767px) 100vw, 480.5px" alt="" src="images/Messay-Feature-Image-1.webp" loading="eager" srcset="images/Messay-Feature-Image-1-p-500.webp 500w, images/Messay-Feature-Image-1-p-800.webp 800w, images/Messay-Feature-Image-1.webp 961w" class="features-image">
-          <div class="pop-up-card top-right background-blur">
-            <h4>Speak</h4>
-            <p>By Sight</p>
-          </div>
-        </div>
-        <div class="large-card">
-          <div class="card-text-block slide-from-right-animation">
-            <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
-              <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/Figma-App-SVG-1771.svg" loading="eager" class="icon"></div>
-              <h5>Messay</h5>
-            </div>
-            <h2>Talk <span class="italics">With your eyes.</span></h2>
-            <p class="max-width-30rem">Messay is an eye and face controlled app that reads out selected/typed messages using synthetic voice.</p>
-            <a href="https://messay.ndk-group.co.jp/en/messay/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
-              <p class="button-text">Explore</p>
-              <p class="button-text move-down hide-on-tab">Explore</p>
-              <div class="circle-absolute"></div>
-            </a>
-          </div>
+      <div class="features-image-wrapper flip-from-left-animation"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Mezic-Feature-Image-p-500.webp 500w, images/Mezic-Feature-Image-p-800.webp 800w, images/Mezic-Feature-Image.webp 961w" alt="" src="images/Mezic-Feature-Image.webp" loading="lazy" class="features-image">
+        <div class="pop-up-card top-left background-blur">
+          <h4>Smart</h4>
+          <p>Swipe</p>
         </div>
       </div>
+    </div>
+    <div class="space-7rem"></div>
+    <div id="explore" class="card-flex">
+      <div class="features-image-wrapper flip-from-left-animation"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Mdk-Feature-Image-p-500.webp 500w, images/Mdk-Feature-Image-p-800.webp 800w, images/Mdk-Feature-Image.webp 961w" alt="" src="images/Mdk-Feature-Image.webp" loading="eager" class="features-image">
+        <div class="pop-up-card top-right background-blur">
+          <h4>Easy</h4>
+          <p>Integration</p>
+        </div>
+      </div>
+      <div class="large-card">
+        <div class="card-text-block slide-from-right-animation">
+          <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
+            <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/MDK-Logo-Black.svg" loading="eager" class="icon"></div>
+            <h5>MDK</h5>
+          </div>
+          <h2>mESSAY <span class="italics">Development Kit</span></h2>
+          <p class="max-width-30rem">Messay Development Kit(referred to as MDK) is an SDK to easily integrate your own app and eye-/face-control operations used in Messay.</p>
+          <a href="https://messay.ndk-group.co.jp/en/sdk/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
+            <p class="button-text">Explore</p>
+            <p class="button-text move-down hide-on-tab">Explore</p>
+            <div class="circle-absolute"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="space-7rem"></div>
+  </div>
+</section>
+<section class="section background-primary">
+  <section class="section">
+    <div class="w-layout-blockcontainer metrices-copy padding-9rem w-container">
       <div class="space-7rem"></div>
-      <div class="card-flex reverse-on-tab">
-        <div class="large-card">
-          <div class="card-text-block slide-from-left-animation">
-            <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
-              <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/Union.png" loading="eager" class="icon"></div>
-              <h5>Mezic</h5>
-            </div>
-            <h2>Hands-free <span class="italics">Smartphone</span></h2>
-            <p class="max-width-30rem">Mezic is an app, which enables you to control your entire smartphone with your eyes and face.</p>
-            <a href="https://messay.ndk-group.co.jp/en/mezic/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
-              <p class="button-text">Explore</p>
-              <p class="button-text move-down hide-on-tab">Explore</p>
-              <div class="circle-absolute"></div>
-            </a>
-          </div>
+      <div class="metrics-wrapper">
+        <div data-w-id="05d9f767-6149-d85e-e1cc-0394ad20c2aa" style="opacity:0" class="metrics-block">
+          <p>Over</p>
+          <h2 class="metrics-text">100K</h2>
+          <p>Installs</p>
         </div>
-        <div class="features-image-wrapper flip-from-left-animation"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Mezic-Feature-Image-p-500.webp 500w, images/Mezic-Feature-Image-p-800.webp 800w, images/Mezic-Feature-Image.webp 961w" alt="" src="images/Mezic-Feature-Image.webp" loading="lazy" class="features-image">
-          <div class="pop-up-card top-left background-blur">
-            <h4>Smart</h4>
-            <p>Swipe</p>
-          </div>
+        <div data-w-id="05d9f767-6149-d85e-e1cc-0394ad20c2b1" style="opacity:0" class="metrics-block">
+          <p>Downloaded in</p>
+          <h2 class="metrics-text">170+</h2>
+          <p>Countries</p>
         </div>
-      </div>
-      <div class="space-7rem"></div>
-      <div id="explore" class="card-flex">
-        <div class="features-image-wrapper flip-from-left-animation"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Mdk-Feature-Image-p-500.webp 500w, images/Mdk-Feature-Image-p-800.webp 800w, images/Mdk-Feature-Image.webp 961w" alt="" src="images/Mdk-Feature-Image.webp" loading="eager" class="features-image">
-          <div class="pop-up-card top-right background-blur">
-            <h4>Easy</h4>
-            <p>Integration</p>
-          </div>
-        </div>
-        <div class="large-card">
-          <div class="card-text-block slide-from-right-animation">
-            <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
-              <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/MDK-Logo-Black.svg" loading="eager" class="icon"></div>
-              <h5>MDK</h5>
-            </div>
-            <h2>mESSAY <span class="italics">Development Kit</span></h2>
-            <p class="max-width-30rem">Messay Development Kit(referred to as MDK) is an SDK to easily integrate your own app and eye-/face-control operations used in Messay.</p>
-            <a href="https://messay.ndk-group.co.jp/en/sdk/" data-w-id="5636032a-1271-e473-ecbe-20e393bd2447" class="button-with-circle-icon w-inline-block">
-              <p class="button-text">Explore</p>
-              <p class="button-text move-down hide-on-tab">Explore</p>
-              <div class="circle-absolute"></div>
-            </a>
-          </div>
+        <div data-w-id="05d9f767-6149-d85e-e1cc-0394ad20c2b8" style="opacity:0" class="metrics-block">
+          <p>Customer Retention</p>
+          <h2 class="metrics-text">92<sup>%</sup></h2>
+          <p>Subscription Ratio on App Store </p>
         </div>
       </div>
       <div class="space-7rem"></div>
     </div>
   </section>
-  <section class="section background-primary">
-    <section class="section">
-      <div class="w-layout-blockcontainer metrices-copy padding-9rem w-container">
-        <div class="space-7rem"></div>
-        <div class="metrics-wrapper">
-          <div data-w-id="05d9f767-6149-d85e-e1cc-0394ad20c2aa" style="opacity:0" class="metrics-block">
-            <p>Over</p>
-            <h2 class="metrics-text">100K</h2>
-            <p>Installs</p>
+</section>
+<section class="section">
+  <div class="w-layout-blockcontainer metrices background-primary rounded-corners-bottom w-container">
+    <div id="about" class="about-tab-wrapper slide-up-animation">
+      <div class="about-text-wrapper">
+        <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
+          <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/1.svg" loading="eager" class="icon"></div>
+          <h5>Achievements</h5>
+        </div>
+        <h3>FEATURED IN...</h3>
+        <p class="about-description">Featured at major tech exhibitions including CES 2024 and VivaTech 2023, recognized for innovation in accessibility technology.</p>
+      </div>
+      <div data-duration-in="400" data-duration-out="200" data-current="Tab 1" data-easing="ease" class="about-tabs w-tabs">
+        <div id="w-node-_0f8342c8-5ffe-8cad-8f51-1379a77b358d-ca8b1441" class="flex-grid w-tab-menu">
+          <a data-w-tab="Tab 1" id="w-node-_0f8342c8-5ffe-8cad-8f51-1379a77b358e-ca8b1441" class="about-wrapper w-inline-block w-tab-link w--current">
+            <div class="about-tab-block">
+              <div class="about-tab-flex"><img loading="lazy" src="images/svg_YgBd.svg" alt="icon" class="small-icon">
+                <h4 class="feature-title">Featured in CES 2024</h4>
+              </div>
+              <div class="feature-paragraph">
+                <p class="max-width-30rem">Showcased our eye-tracking technology among global tech leaders in Las Vegas</p>
+              </div>
+            </div>
+          </a>
+          <a data-w-tab="Tab 2" class="about-wrapper w-inline-block w-tab-link">
+            <div class="about-tab-block">
+              <div class="about-tab-flex"><img loading="lazy" src="images/svg_YgBd.svg" alt="icon" class="small-icon">
+                <h4 class="feature-title">VivaTech 2024 Featured Startup</h4>
+              </div>
+              <div class="feature-paragraph">
+                <p class="max-width-30rem">Selected to present our innovative accessibility solutions at Europe&#x27;s largest startup event</p>
+              </div>
+            </div>
+          </a>
+          <a data-w-tab="Tab 3" class="about-wrapper w-inline-block w-tab-link">
+            <div class="about-tab-block">
+              <div class="about-tab-flex"><img loading="lazy" src="images/svg_YgBd.svg" alt="icon" class="small-icon">
+                <h4 class="feature-title">Featured in The Yomiuri Shimbun</h4>
+              </div>
+              <div class="feature-paragraph">
+                <p class="max-width-30rem">Messay was featured in the Yomiuri Shimbun, Japan's largest newspaper, for its innovative eye-tracking communication app. </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="about-image-wrapper w-tab-content">
+          <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+            <div class="feature-image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/3-p-500.webp 500w, images/3-p-800.webp 800w, images/3.webp 961w" alt="" src="images/3.webp" loading="eager" class="image-absolute"></div>
           </div>
-          <div data-w-id="05d9f767-6149-d85e-e1cc-0394ad20c2b1" style="opacity:0" class="metrics-block">
-            <p>Downloaded in</p>
-            <h2 class="metrics-text">170+</h2>
-            <p>Countries</p>
+          <div data-w-tab="Tab 2" class="w-tab-pane">
+            <div class="feature-image-wrapper"><img sizes="100vw" srcset="images/4-p-500.webp 500w, images/4-p-800.webp 800w, images/4.webp 961w" alt="" src="images/4.webp" loading="eager" class="image-absolute"></div>
           </div>
-          <div data-w-id="05d9f767-6149-d85e-e1cc-0394ad20c2b8" style="opacity:0" class="metrics-block">
-            <p>Customer Retention</p>
-            <h2 class="metrics-text">92<sup>%</sup></h2>
-            <p>Subscription Ratio on App Store </p>
+          <div data-w-tab="Tab 3" class="w-tab-pane">
+            <div class="feature-image-wrapper"><img sizes="100vw" srcset="images/5-p-500.webp 500w, images/5-p-800.webp 800w, images/5.webp 961w" alt="" src="images/5.webp" loading="eager" class="image-absolute"></div>
           </div>
         </div>
-        <div class="space-7rem"></div>
+      </div>
+    </div>
+    <div class="space-7rem"></div>
+  </div>
+</section>
+<section class="section">
+  <div class="w-layout-blockcontainer metrices w-container">
+    <div class="reviews-wrapper">
+      <div class="space-7rem"></div>
+      <div data-delay="5000" data-animation="slide" class="reviews-slider w-slider" data-autoplay="false" data-easing="ease-in-out" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+        <div class="reviews-mask w-slider-mask">
+          <div class="reviews-slide w-slide">
+            <div class="reviews-container w-container">
+              <div class="space-4rem"></div>
+              <div data-w-id="31875e20-72f1-7236-505e-1e3bce9112e0" style="opacity:0" class="reviews-listing-wrapper">
+                <div class="reviews-card"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-One-p-500.jpg 500w, images/Testimonial-Pic-One-p-800.jpg 800w, images/Testimonial-Pic-One-p-1080.jpg 1080w, images/Testimonial-Pic-One.jpg 1440w" alt="" src="images/Testimonial-Pic-One.jpg" loading="eager" class="reviews-image-circle">
+                  <div class="reviews-block">
+                    <p>"A unique and excellent app with no equivalent"</p>
+                    <div class="reviews-name-block">
+                      <h5>Шпэндикс</h5>
+                      <h6>Russia</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-card background-secondary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Two-p-500.jpg 500w, images/Testimonial-Pic-Two-p-800.jpg 800w, images/Testimonial-Pic-Two-p-1080.jpg 1080w, images/Testimonial-Pic-Two.jpg 1440w" alt="" src="images/Testimonial-Pic-Two.jpg" loading="eager" class="reviews-image-circle">
+                  <div class="reviews-block">
+                    <p>"One of the best app I have ever used!"</p>
+                    <div class="reviews-name-block">
+                      <h5>Logan Wrigrh</h5>
+                      <h6>USA</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-card background-primary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Three-p-500.jpg 500w, images/Testimonial-Pic-Three-p-800.jpg 800w, images/Testimonial-Pic-Three-p-1080.jpg 1080w, images/Testimonial-Pic-Three.jpg 1440w" alt="" src="images/Testimonial-Pic-Three.jpg" loading="eager" class="reviews-image-circle">
+                  <div class="reviews-block">
+                    <p>"This app is really useful so you do not get tired from scrolling TikTok!"</p>
+                    <div class="reviews-name-block">
+                      <h5>Moldi ARKAPUTRA</h5>
+                      <h6>iNDONESIA</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-slide w-slide">
+            <div class="reviews-container w-container">
+              <div class="space-4rem"></div>
+              <div data-w-id="31875e20-72f1-7236-505e-1e3bce911302" style="opacity:0" class="reviews-listing-wrapper">
+                <div class="reviews-card"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Four-p-500.jpg 500w, images/Testimonial-Pic-Four-p-800.jpg 800w, images/Testimonial-Pic-Four-p-1080.jpg 1080w, images/Testimonial-Pic-Four.jpg 1440w" alt="" src="images/Testimonial-Pic-Four.jpg" loading="eager" class="reviews-image-circle">
+                  <div class="reviews-block">
+                    <p>"The idea and functionality are great. However, the eye tracking needs improvement, since sometimes just looking at the centre of the screen makes me loose sight of the phone."</p>
+                    <div>
+                      <h5>Eduard Flavian Farcas</h5>
+                      <h6>Italy</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-card background-secondary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Five-p-500.jpg 500w, images/Testimonial-Pic-Five-p-800.jpg 800w, images/Testimonial-Pic-Five-p-1080.jpg 1080w, images/Testimonial-Pic-Five.jpg 1440w" alt="" src="images/Testimonial-Pic-Five.jpg" loading="eager" class="reviews-image-circle">
+                  <div class="reviews-block">
+                    <p>&quot;I came across an app for the first time that can be operated just by opening and closing my eyes ."</p>
+                    <div>
+                      <h5>annonymous</h5>
+                      <h6>Japan</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-card background-primary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Six-p-500.jpg 500w, images/Testimonial-Pic-Six-p-800.jpg 800w, images/Testimonial-Pic-Six-p-1080.jpg 1080w, images/Testimonial-Pic-Six.jpg 1440w" alt="" src="images/Testimonial-Pic-Six.jpg" loading="eager" class="reviews-image-circle">
+                  <div class="reviews-block">
+                    <p>"Messay is truly amazing for people who cannot speak. I hope it more well-known."</p>
+                    <div>
+                      <h5>Annonymous</h5>
+                      <h6>Belgium</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-left-arrow w-slider-arrow-left">
+          <div class="reviews-icon w-icon-slider-left"></div>
+        </div>
+        <div class="reviews-right-arrow w-slider-arrow-right">
+          <div class="reviews-icon w-icon-slider-right"></div>
+        </div>
+        <div class="slide-nav-reviews w-slider-nav w-slider-nav-invert w-round"></div>
+      </div>
+      <div class="space-7rem"></div>
+    </div>
+  </div>
+</section>
+<section id="Expo-2025" class="section">
+  <div id="FAQ-section" class="w-layout-blockcontainer metrices padding-9rem w-container">
+    <div class="posts-title-flex flip-from-left-animation">
+      <h3>EXPO Details </h3>
+      <div class="posts-text-block">
+        <h5>Use can find us in the osaka expo Health care pavilion </h5>
+      </div>
+    </div>
+    <div class="space-4rem"></div>
+    <section class="uui-section_blogsection06">
+      <div class="uui-page-padding-5">
+        <div class="uui-container-large-5">
+          <div class="uui-padding-vertical-xhuge-5">
+            <div class="uui-text-align-center-3">
+              <div class="uui-max-width-large-4 align-center-3">
+                <div class="uui-heading-subheading-4">World Expo 2025</div>
+                <h2 class="uui-heading-medium-4">Osaka World Expo 2025</h2>
+                <div class="uui-space-xsmall-5"></div>
+                <div class="uui-text-size-large-4">Visit us at Osaka World Expo 2025 Health care Pavilion<br> from July 29/25 to August 4/25</div>
+              </div>
+            </div>
+            <div class="uui-blogsection06_component">
+              <div class="uui-blogsection06_list-wrapper">
+                <div class="w-layout-grid uui-blogsection06_list">
+                  <div class="uui-blogsection06_item">
+                    <a href="#" class="uui-blogsection06_image-link w-inline-block">
+                      <div class="embedded-map">
+                        <div class="map w-widget w-widget-map" data-widget-style="roadmap" data-widget-latlng="34.6508218,135.3872616" aria-label="Health Care Pavilion" data-enable-scroll="true" role="region" title="Health Care Pavilion" data-enable-touch="true" data-widget-zoom="17" data-widget-tooltip="Osaka EXPO Healthcare Pavilion"></div>
+                      </div>
+                    </a>
+                    <a href="#" class="uui-blogsection06_title-link w-inline-block">
+                      <h3 class="uui-heading-xsmall-2">Pavilion information</h3>
+                    </a>
+                    <div class="uui-text-size-medium-5">Learn about our innovative healthcare solutions and interactive demonstrations at the Osaka World Expo 2025. Visit our booth to experience the future of healthcare technology.</div>
+                    <div class="uui-space-small-4"></div>
+                    <a href="https://maps.app.goo.gl/zzqRHBnadzTwwi826" class="uui-button-link-3 w-inline-block">
+                      <div class="text-block-3">View Map</div>
+                      <div class="uui-button-icon-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.83301 14.1668L14.1663 5.8335M14.1663 5.8335H5.83301M14.1663 5.8335V14.1668" stroke="CurrentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                    </a>
+                  </div>
+                  <div class="uui-blogsection06_item">
+                    <a href="#" class="uui-blogsection06_image-link w-inline-block">
+                      <div class="uui-blogsection06_image-wrapper"><img sizes="100vw" srcset="images/map_reborn_challenge-p-500.png 500w, images/map_reborn_challenge-p-800.png 800w, images/map_reborn_challenge-p-1080.png 1080w, images/map_reborn_challenge.png 1500w" alt="" src="images/map_reborn_challenge.png" loading="lazy" class="uui-blogsection06_image"></div>
+                    </a>
+                    <a href="#" class="uui-blogsection06_title-link w-inline-block">
+                      <h3 class="uui-heading-xsmall-2">Find Us here</h3>
+                    </a>
+                    <div class="uui-text-size-medium-5">Located near the East Gate entrance, our interactive exhibits showcase the future of personalised Medicare and wellness technology.</div>
+                    <div class="uui-space-small-4"></div>
+                    <a href="https://maps.app.goo.gl/JycEsLAQWS11P4pf8" class="uui-button-link-3 w-inline-block">
+                      <div class="text-block-4">View Map</div>
+                      <div class="uui-button-icon-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.83301 14.1668L14.1663 5.8335M14.1663 5.8335H5.83301M14.1663 5.8335V14.1668" stroke="CurrentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-  </section>
-  <section class="section">
-    <div class="w-layout-blockcontainer metrices background-primary rounded-corners-bottom w-container">
-      <div id="about" class="about-tab-wrapper slide-up-animation">
-        <div class="about-text-wrapper">
-          <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
-            <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/1.svg" loading="eager" class="icon"></div>
-            <h5>Achievements</h5>
-          </div>
-          <h3>FEATURED IN...</h3>
-          <p class="about-description">Featured at major tech exhibitions including CES 2024 and VivaTech 2023, recognized for innovation in accessibility technology.</p>
-        </div>
-        <div data-duration-in="400" data-duration-out="200" data-current="Tab 1" data-easing="ease" class="about-tabs w-tabs">
-          <div id="w-node-_0f8342c8-5ffe-8cad-8f51-1379a77b358d-ca8b1441" class="flex-grid w-tab-menu">
-            <a data-w-tab="Tab 1" id="w-node-_0f8342c8-5ffe-8cad-8f51-1379a77b358e-ca8b1441" class="about-wrapper w-inline-block w-tab-link w--current">
-              <div class="about-tab-block">
-                <div class="about-tab-flex"><img loading="lazy" src="images/svg_YgBd.svg" alt="icon" class="small-icon">
-                  <h4 class="feature-title">Featured in CES 2024</h4>
-                </div>
-                <div class="feature-paragraph">
-                  <p class="max-width-30rem">Showcased our eye-tracking technology among global tech leaders in Las Vegas</p>
-                </div>
-              </div>
-            </a>
-            <a data-w-tab="Tab 2" class="about-wrapper w-inline-block w-tab-link">
-              <div class="about-tab-block">
-                <div class="about-tab-flex"><img loading="lazy" src="images/svg_YgBd.svg" alt="icon" class="small-icon">
-                  <h4 class="feature-title">VivaTech 2024 Featured Startup</h4>
-                </div>
-                <div class="feature-paragraph">
-                  <p class="max-width-30rem">Selected to present our innovative accessibility solutions at Europe&#x27;s largest startup event</p>
-                </div>
-              </div>
-            </a>
-            <a data-w-tab="Tab 3" class="about-wrapper w-inline-block w-tab-link">
-              <div class="about-tab-block">
-                <div class="about-tab-flex"><img loading="lazy" src="images/svg_YgBd.svg" alt="icon" class="small-icon">
-                  <h4 class="feature-title">Featured in The Yomiuri Shimbun</h4>
-                </div>
-                <div class="feature-paragraph">
-                  <p class="max-width-30rem">Messay was featured in the Yomiuri Shimbun, Japan's largest newspaper, for its innovative eye-tracking communication app. </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="about-image-wrapper w-tab-content">
-            <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
-              <div class="feature-image-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/3-p-500.webp 500w, images/3-p-800.webp 800w, images/3.webp 961w" alt="" src="images/3.webp" loading="eager" class="image-absolute"></div>
-            </div>
-            <div data-w-tab="Tab 2" class="w-tab-pane">
-              <div class="feature-image-wrapper"><img sizes="100vw" srcset="images/4-p-500.webp 500w, images/4-p-800.webp 800w, images/4.webp 961w" alt="" src="images/4.webp" loading="eager" class="image-absolute"></div>
-            </div>
-            <div data-w-tab="Tab 3" class="w-tab-pane">
-              <div class="feature-image-wrapper"><img sizes="100vw" srcset="images/5-p-500.webp 500w, images/5-p-800.webp 800w, images/5.webp 961w" alt="" src="images/5.webp" loading="eager" class="image-absolute"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="space-7rem"></div>
+    <div class="space-4rem"></div>
+    <div class="centered-block">
+      <a href="https://www.expo2025.or.jp/en/domestic-pv/osaka-pv/" data-w-id="3beb919a-4aaa-f885-16a0-1c9b6601a3ec" class="button-with-circle-icon button-light w-inline-block">
+        <p class="button-text">expo 2025</p>
+        <p class="button-text move-down hide-on-tab">expo 2025</p>
+        <div class="circle-absolute"></div>
+      </a>
     </div>
-  </section>
-  <section class="section">
-    <div class="w-layout-blockcontainer metrices w-container">
-      <div class="reviews-wrapper">
-        <div class="space-7rem"></div>
-        <div data-delay="5000" data-animation="slide" class="reviews-slider w-slider" data-autoplay="false" data-easing="ease-in-out" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-          <div class="reviews-mask w-slider-mask">
-            <div class="reviews-slide w-slide">
-              <div class="reviews-container w-container">
-                <div class="space-4rem"></div>
-                <div data-w-id="31875e20-72f1-7236-505e-1e3bce9112e0" style="opacity:0" class="reviews-listing-wrapper">
-                  <div class="reviews-card"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-One-p-500.jpg 500w, images/Testimonial-Pic-One-p-800.jpg 800w, images/Testimonial-Pic-One-p-1080.jpg 1080w, images/Testimonial-Pic-One.jpg 1440w" alt="" src="images/Testimonial-Pic-One.jpg" loading="eager" class="reviews-image-circle">
-                    <div class="reviews-block">
-                      <p>"A unique and excellent app with no equivalent"</p>
-                      <div class="reviews-name-block">
-                        <h5>Шпэндикс</h5>
-                        <h6>Russia</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reviews-card background-secondary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Two-p-500.jpg 500w, images/Testimonial-Pic-Two-p-800.jpg 800w, images/Testimonial-Pic-Two-p-1080.jpg 1080w, images/Testimonial-Pic-Two.jpg 1440w" alt="" src="images/Testimonial-Pic-Two.jpg" loading="eager" class="reviews-image-circle">
-                    <div class="reviews-block">
-                      <p>"One of the best app I have ever used!"</p>
-                      <div class="reviews-name-block">
-                        <h5>Logan Wrigrh</h5>
-                        <h6>USA</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reviews-card background-primary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Three-p-500.jpg 500w, images/Testimonial-Pic-Three-p-800.jpg 800w, images/Testimonial-Pic-Three-p-1080.jpg 1080w, images/Testimonial-Pic-Three.jpg 1440w" alt="" src="images/Testimonial-Pic-Three.jpg" loading="eager" class="reviews-image-circle">
-                    <div class="reviews-block">
-                      <p>"This app is really useful so you do not get tired from scrolling TikTok!"</p>
-                      <div class="reviews-name-block">
-                        <h5>Moldi ARKAPUTRA</h5>
-                        <h6>iNDONESIA</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="reviews-slide w-slide">
-              <div class="reviews-container w-container">
-                <div class="space-4rem"></div>
-                <div data-w-id="31875e20-72f1-7236-505e-1e3bce911302" style="opacity:0" class="reviews-listing-wrapper">
-                  <div class="reviews-card"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Four-p-500.jpg 500w, images/Testimonial-Pic-Four-p-800.jpg 800w, images/Testimonial-Pic-Four-p-1080.jpg 1080w, images/Testimonial-Pic-Four.jpg 1440w" alt="" src="images/Testimonial-Pic-Four.jpg" loading="eager" class="reviews-image-circle">
-                    <div class="reviews-block">
-                      <p>"The idea and functionality are great. However, the eye tracking needs improvement, since sometimes just looking at the centre of the screen makes me loose sight of the phone."</p>
-                      <div>
-                        <h5>Eduard Flavian Farcas</h5>
-                        <h6>Italy</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reviews-card background-secondary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Five-p-500.jpg 500w, images/Testimonial-Pic-Five-p-800.jpg 800w, images/Testimonial-Pic-Five-p-1080.jpg 1080w, images/Testimonial-Pic-Five.jpg 1440w" alt="" src="images/Testimonial-Pic-Five.jpg" loading="eager" class="reviews-image-circle">
-                    <div class="reviews-block">
-                      <p>&quot;I came across an app for the first time that can be operated just by opening and closing my eyes ."</p>
-                      <div>
-                        <h5>annonymous</h5>
-                        <h6>Japan</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="reviews-card background-primary"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="images/Testimonial-Pic-Six-p-500.jpg 500w, images/Testimonial-Pic-Six-p-800.jpg 800w, images/Testimonial-Pic-Six-p-1080.jpg 1080w, images/Testimonial-Pic-Six.jpg 1440w" alt="" src="images/Testimonial-Pic-Six.jpg" loading="eager" class="reviews-image-circle">
-                    <div class="reviews-block">
-                      <p>"Messay is truly amazing for people who cannot speak. I hope it more well-known."</p>
-                      <div>
-                        <h5>Annonymous</h5>
-                        <h6>Belgium</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="reviews-left-arrow w-slider-arrow-left">
-            <div class="reviews-icon w-icon-slider-left"></div>
-          </div>
-          <div class="reviews-right-arrow w-slider-arrow-right">
-            <div class="reviews-icon w-icon-slider-right"></div>
-          </div>
-          <div class="slide-nav-reviews w-slider-nav w-slider-nav-invert w-round"></div>
-        </div>
-        <div class="space-7rem"></div>
+    <div class="space-7rem"></div>
+  </div>
+</section>
+<section id="FAQ" class="section">
+  <div class="w-layout-blockcontainer metrices w-container">
+    <div class="faqs-block">
+      <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
+        <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/svg_xL0N.svg" loading="eager" class="icon"></div>
+        <h5>FAQs</h5>
       </div>
+      <h2 data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c07895">Have Questions?</h2>
+      <p data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c07897" class="max-width-30rem">We're committed to making your experience as smooth and straightforward as possible.</p>
     </div>
-  </section>
-  <section id="Expo-2025" class="section">
-    <div id="FAQ-section" class="w-layout-blockcontainer metrices padding-9rem w-container">
-      <div class="posts-title-flex flip-from-left-animation">
-        <h3>EXPO Details </h3>
-        <div class="posts-text-block">
-          <h5>Use can find us in the osaka expo Health care pavilion </h5>
-        </div>
-      </div>
-      <div class="space-4rem"></div>
-      <section class="uui-section_blogsection06">
-        <div class="uui-page-padding-5">
-          <div class="uui-container-large-5">
-            <div class="uui-padding-vertical-xhuge-5">
-              <div class="uui-text-align-center-3">
-                <div class="uui-max-width-large-4 align-center-3">
-                  <div class="uui-heading-subheading-4">World Expo 2025</div>
-                  <h2 class="uui-heading-medium-4">Osaka World Expo 2025</h2>
-                  <div class="uui-space-xsmall-5"></div>
-                  <div class="uui-text-size-large-4">Visit us at Osaka World Expo 2025 Health care Pavilion<br> from July 29/25 to August 4/25</div>
-                </div>
-              </div>
-              <div class="uui-blogsection06_component">
-                <div class="uui-blogsection06_list-wrapper">
-                  <div class="w-layout-grid uui-blogsection06_list">
-                    <div class="uui-blogsection06_item">
-                      <a href="#" class="uui-blogsection06_image-link w-inline-block">
-                        <div class="embedded-map">
-                          <div class="map w-widget w-widget-map" data-widget-style="roadmap" data-widget-latlng="34.6508218,135.3872616" aria-label="Health Care Pavilion" data-enable-scroll="true" role="region" title="Health Care Pavilion" data-enable-touch="true" data-widget-zoom="17" data-widget-tooltip="Osaka EXPO Healthcare Pavilion"></div>
-                        </div>
-                      </a>
-                      <a href="#" class="uui-blogsection06_title-link w-inline-block">
-                        <h3 class="uui-heading-xsmall-2">Pavilion information</h3>
-                      </a>
-                      <div class="uui-text-size-medium-5">Learn about our innovative healthcare solutions and interactive demonstrations at the Osaka World Expo 2025. Visit our booth to experience the future of healthcare technology.</div>
-                      <div class="uui-space-small-4"></div>
-                      <a href="https://maps.app.goo.gl/zzqRHBnadzTwwi826" class="uui-button-link-3 w-inline-block">
-                        <div class="text-block-3">View Map</div>
-                        <div class="uui-button-icon-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.83301 14.1668L14.1663 5.8335M14.1663 5.8335H5.83301M14.1663 5.8335V14.1668" stroke="CurrentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg></div>
-                      </a>
-                    </div>
-                    <div class="uui-blogsection06_item">
-                      <a href="#" class="uui-blogsection06_image-link w-inline-block">
-                        <div class="uui-blogsection06_image-wrapper"><img sizes="100vw" srcset="images/map_reborn_challenge-p-500.png 500w, images/map_reborn_challenge-p-800.png 800w, images/map_reborn_challenge-p-1080.png 1080w, images/map_reborn_challenge.png 1500w" alt="" src="images/map_reborn_challenge.png" loading="lazy" class="uui-blogsection06_image"></div>
-                      </a>
-                      <a href="#" class="uui-blogsection06_title-link w-inline-block">
-                        <h3 class="uui-heading-xsmall-2">Find Us here</h3>
-                      </a>
-                      <div class="uui-text-size-medium-5">Located near the East Gate entrance, our interactive exhibits showcase the future of personalised Medicare and wellness technology.</div>
-                      <div class="uui-space-small-4"></div>
-                      <a href="https://maps.app.goo.gl/JycEsLAQWS11P4pf8" class="uui-button-link-3 w-inline-block">
-                        <div class="text-block-4">View Map</div>
-                        <div class="uui-button-icon-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.83301 14.1668L14.1663 5.8335M14.1663 5.8335H5.83301M14.1663 5.8335V14.1668" stroke="CurrentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg></div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="space-4rem"></div>
-      <div class="centered-block">
-        <a href="https://www.expo2025.or.jp/en/domestic-pv/osaka-pv/" data-w-id="3beb919a-4aaa-f885-16a0-1c9b6601a3ec" class="button-with-circle-icon button-light w-inline-block">
-          <p class="button-text">expo 2025</p>
-          <p class="button-text move-down hide-on-tab">expo 2025</p>
-          <div class="circle-absolute"></div>
-        </a>
-      </div>
-      <div class="space-7rem"></div>
-    </div>
-  </section>
-  <section id="FAQ" class="section">
-    <div class="w-layout-blockcontainer metrices w-container">
-      <div class="faqs-block">
-        <div data-w-id="55686b65-573b-6b1e-27a8-356f0a4302e2" class="subheading-flex">
-          <div class="icon-wrapper"><img width="Auto" height="Auto" alt="" src="images/svg_xL0N.svg" loading="eager" class="icon"></div>
-          <h5>FAQs</h5>
-        </div>
-        <h2 data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c07895">Have Questions?</h2>
-        <p data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c07897" class="max-width-30rem">We're committed to making your experience as smooth and straightforward as possible.</p>
-      </div>
-      <div class="space-4rem"></div>
-      <div class="faq-wrapper slide-up-animation">
-        <div class="faq-dropdown">
-          <div data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c0789c" class="dropdown-toggle">
-            <div class="space-1rem"></div>
-            <div class="faq-flex">
-              <h4 class="faq-question">Where can I find MESSAY at the Osaka World Expo 2025?</h4>
-              <div data-is-ix2-target="1" class="faq-icon" data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078a1" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66e57311172b9a6012d4d709/66e57311172b9a6012d4d789_FAQ%20icon.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-ix2-initial-state="0"></div>
-            </div>
-            <div class="space-1rem"></div>
-            <div class="dropdown-answer">
-              <p>MESSAY will be exhibiting at the Healthcare Pavilion located near the East Gate entrance. Look for our booth marked with the MESSAY logo as shown on our interactive map. Our staff will be available to demonstrate our eye-tracking technology throughout the Expo period.</p>
-            </div>
-            <div class="space-1rem"></div>
-          </div>
-        </div>
-        <div class="faq-dropdown">
-          <div data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078a8" class="dropdown-toggle">
-            <div class="space-1rem"></div>
-            <div class="faq-flex">
-              <h4 class="faq-question">What MESSAY products will be demonstrated at the Expo?</h4>
-              <div data-is-ix2-target="1" class="faq-icon" data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078ad" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66e57311172b9a6012d4d709/66e57311172b9a6012d4d789_FAQ%20icon.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-ix2-initial-state="0"></div>
-            </div>
-            <div class="space-1rem"></div>
-            <div class="dropdown-answer">
-              <p>Visitors can experience our full suite of eye-controlled applications including Messay (Talk with Your Eyes), Tube for Anyone (Eye Tracking YouTube), and Mezic (Eye/Face Phone Control). Our team will guide you through hands-on demonstrations showing how these technologies help people with limited mobility communicate effectively.</p>
-            </div>
-            <div class="space-1rem"></div>
-          </div>
-        </div>
-        <div class="faq-dropdown">
-          <div data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078b4" class="dropdown-toggle">
-            <div class="space-1rem"></div>
-            <div class="faq-flex">
-              <h4 class="faq-question">How can I learn more about MESSAY&#x27;s technology before visiting the Expo?</h4>
-              <div data-is-ix2-target="1" class="faq-icon" data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078b9" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66e57311172b9a6012d4d709/66e57311172b9a6012d4d789_FAQ%20icon.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-ix2-initial-state="0"></div>
-            </div>
-            <div class="space-1rem"></div>
-            <div class="dropdown-answer">
-              <p>You can download our applications from the App Store or Google Play Store to try them before your visit. Our website offers comprehensive operation guide videos and tuning guides to understand how our eye-tracking technology works. For specific questions, you can contact us through the Contact form on our website.</p>
-            </div>
-            <div class="space-1rem"></div>
-          </div>
-        </div>
-      </div>
-      <div class="space-2rem"></div>
-    </div>
-  </section>
-  <section id="Contact-Form" class="section">
-    <div class="space-7rem"></div>
-    <div class="space-7rem"></div>
-    <div class="space-7rem"></div>
-    <div class="space-7rem"></div>
-    <div class="w-layout-blockcontainer cta-container w-container">
-      <div class="cta-wrapper">
-        <div class="cta-card slide-down-animation">
-          <h2 class="cta-title">Request a <span class="italics">Free Consultation</span></h2>
+    <div class="space-4rem"></div>
+    <div class="faq-wrapper slide-up-animation">
+      <div class="faq-dropdown">
+        <div data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c0789c" class="dropdown-toggle">
           <div class="space-1rem"></div>
-          <p class="max-width-30rem">Discover how Messay can empower communication for you or your loved ones!</p>
-          <div class="space-2rem"></div>
-          
-          <!-- COMMENTED OUT: reCAPTCHA moved here, OUTSIDE the form but inside the green card
-          <div class="g-recaptcha" 
-               data-sitekey="THE RECAPTCHA SITE KEY HERE"
-               style="display: flex; justify-content: center; margin-bottom: .5rem;">
+          <div class="faq-flex">
+            <h4 class="faq-question">Where can I find MESSAY at the Osaka World Expo 2025?</h4>
+            <div data-is-ix2-target="1" class="faq-icon" data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078a1" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66e57311172b9a6012d4d709/66e57311172b9a6012d4d789_FAQ%20icon.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-ix2-initial-state="0"></div>
           </div>
-          -->
-
-          <!-- <div class="sign-up-form w-form"> -->
-            <!-- COMMENTED OUT: Original form structure
-            <form action="https://api.staticforms.xyz/submit" method="post" id="newsletter-form">
-              <div class="sign-up-form-container" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                 Required hidden fields --
-                <input type="hidden" name="accessKey" value="YOUR STATIC FORMS ACCESS KEY HERE">
-                <input type="hidden" name="subject" value="New Newsletter Subscription from Messay">
-                <input type="hidden" name="redirectTo" value="thankyou.html">
-                <input type="hidden" name="replyTo" value="@">
-
-                Email input - clean and simple now --
-                <input class="sign-up-text-field w-input" 
-                       maxlength="256" 
-                       name="email" 
-                       data-name="Newsletter Email"
-                       aria-label="Enter your email"
-                       placeholder="Enter your email" 
-                       type="email" 
-                       required
-                       style="width: 100%; max-width: 450px;">
-                
-                 Submit button --
-                <input type="submit" 
-                       data-wait="Please wait..." 
-                       class="button-subscribe w-button" 
-                       value="Submit"
-                       style="width: 100%; max-width: 450px;">
-              </div>
-            </form>
-            -->
-            
-            <!-- NEW: Contact Us button with better styling and animations -->
-            <div class="slide-up-animation" style="display: flex; justify-content: center; align-items: center;">
-              <a href="https://messay.ndk-group.co.jp/en/feedback/" 
-                 target="_blank"
-                 class="button-subscribe w-button" 
-                 style="width: 100%; max-width: 500px; padding: 20px 40px; font-size: 18px; text-decoration: none; display: block; text-align: center; transition: all 0.3s ease; transform: scale(1);"
-                 onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.2)';"
-                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-                Contact Us
-              </a>
-            </div>
-            
-            <!-- COMMENTED OUT: Success and error messages
-            <div class="success-message-sign-up-form w-form-done">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="error-message w-form-fail">
-              <div class="red-font">Oops! Something went wrong while submitting the form.</div>
-            </div>
-            -->
+          <div class="space-1rem"></div>
+          <div class="dropdown-answer">
+            <p>MESSAY will be exhibiting at the Healthcare Pavilion located near the East Gate entrance. Look for our booth marked with the MESSAY logo as shown on our interactive map. Our staff will be available to demonstrate our eye-tracking technology throughout the Expo period.</p>
           </div>
+          <div class="space-1rem"></div>
         </div>
       </div>
-    <!--</div>-->
-  </section>
-  <section class="section background-primary">
-    <div class="w-layout-blockcontainer metrices padding-4-5rem w-container">
-      <div class="space-2rem"></div>
-      <div data-w-id="a8a7ab10-515b-b3cf-a409-904bb58a38dd" class="footer-top">
-        <div class="footer-block">
-          <a href="index.html" aria-current="page" class="footer-logo-link-wrapper w-nav-brand w--current"><img width="Auto" height="Auto" alt="" src="images/Messay-Logo-Text-1.png" loading="eager" srcset="images/Messay-Logo-Text-1-p-500.png 500w, images/Messay-Logo-Text-1-p-800.png 800w, images/Messay-Logo-Text-1.png 1015w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 728px, 940px" class="footer-logo"></a>
-          <div class="socials-wrapper">
-            <a href="https://twitter.com/ndk_messay" target="_blank" class="w-inline-block"><img width="16" height="Auto" alt="" src="images/1.png" loading="eager" srcset="images/1-p-500.png 500w, images/1.png 512w" sizes="(max-width: 767px) 16px, (max-width: 991px) 2vw, (max-width: 1279px) 16px, 1vw" class="social-icon smaller"></a>
+      <div class="faq-dropdown">
+        <div data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078a8" class="dropdown-toggle">
+          <div class="space-1rem"></div>
+          <div class="faq-flex">
+            <h4 class="faq-question">What MESSAY products will be demonstrated at the Expo?</h4>
+            <div data-is-ix2-target="1" class="faq-icon" data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078ad" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66e57311172b9a6012d4d709/66e57311172b9a6012d4d789_FAQ%20icon.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-ix2-initial-state="0"></div>
           </div>
-          <p class="max-width-17vw">Talk With Your Eyes!</p>
-        </div>
-        <div class="footer-right-flex">
-          <div class="footer-wrapper">
-            <h5 class="heading-2">Pages</h5>
-            <div class="footer-link-wrapper">
-              <a href="index.html" aria-current="page" class="footer-link w--current">Home</a>
-              <a href="index.html" aria-current="page" class="footer-link move-down w--current">Home</a>
-            </div>
-            <div class="footer-link-wrapper">
-              <a href="game.html" class="footer-link">Game </a>
-              <a href="game.html" class="footer-link move-down">Game</a>
-            </div>
-            <div class="footer-link-wrapper">
-              <a href="https://messay.ndk-group.co.jp/en/privacy/" class="footer-link">Privacy Policy</a>
-              <a href="https://messay.ndk-group.co.jp/en/privacy/" class="footer-link move-down">Privacy Policy</a>
-            </div>
-            <div class="footer-link-wrapper">
-              <a href="https://messay.ndk-group.co.jp/en/eula/" class="footer-link">EULA</a>
-              <a href="https://messay.ndk-group.co.jp/en/eula/" class="footer-link move-down">EULA</a>
-            </div>
+          <div class="space-1rem"></div>
+          <div class="dropdown-answer">
+            <p>Visitors can experience our full suite of eye-controlled applications including Messay (Talk with Your Eyes), Tube for Anyone (Eye Tracking YouTube), and Mezic (Eye/Face Phone Control). Our team will guide you through hands-on demonstrations showing how these technologies help people with limited mobility communicate effectively.</p>
           </div>
-          <div class="footer-wrapper">
-            <h5 class="heading-3">Main</h5>
-            <div class="footer-link-wrapper">
-              <a href="index.html#Contact-Form" class="footer-link">Contact Us</a>
-              <a href="index.html#Contact-Form" class="footer-link move-down">Contact Us</a>
-            </div>
-            <div class="footer-link-wrapper">
-              <a href="index.html#Expo-2025" class="footer-link">EXPO 2025</a>
-              <a href="index.html#Expo-2025" class="footer-link move-down">EXPO 2025</a>
-            </div>
-            <div class="footer-link-wrapper">
-              <a href="index.html#OurApps" class="footer-link">Our Apps</a>
-              <a href="index.html#OurApps" class="footer-link move-down">Our Apps</a>
-            </div>
-          </div>
+          <div class="space-1rem"></div>
         </div>
       </div>
-      <div data-w-id="a8a7ab10-515b-b3cf-a409-904bb58a3910" class="footer-line"></div>
-      <div data-w-id="a8a7ab10-515b-b3cf-a409-904bb58a3911" class="footer-bottom">
-        <a href="https://www.ndk-group.co.jp/" target="_blank" class="w-inline-block">
-          <p class="footer-bottom-text">NDK Ink. © 2025 All Rights Reserved. </p>
-        </a>
+      <div class="faq-dropdown">
+        <div data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078b4" class="dropdown-toggle">
+          <div class="space-1rem"></div>
+          <div class="faq-flex">
+            <h4 class="faq-question">How can I learn more about MESSAY&#x27;s technology before visiting the Expo?</h4>
+            <div data-is-ix2-target="1" class="faq-icon" data-w-id="7d9dd6a1-8f20-1a79-6d6a-27aea2c078b9" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66e57311172b9a6012d4d709/66e57311172b9a6012d4d789_FAQ%20icon.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-ix2-initial-state="0"></div>
+          </div>
+          <div class="space-1rem"></div>
+          <div class="dropdown-answer">
+            <p>You can download our applications from the App Store or Google Play Store to try them before your visit. Our website offers comprehensive operation guide videos and tuning guides to understand how our eye-tracking technology works. For specific questions, you can contact us through the Contact form on our website.</p>
+          </div>
+          <div class="space-1rem"></div>
+        </div>
       </div>
     </div>
-  </section>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67ff56e7127c2396ca8b1406" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+    <div class="space-2rem"></div>
+  </div>
+</section>
+<section id="Contact-Form" class="section">
+  <div class="space-7rem"></div>
+  <div class="space-7rem"></div>
+  <div class="space-7rem"></div>
+  <div class="space-7rem"></div>
+  <div class="w-layout-blockcontainer cta-container w-container">
+    <div class="cta-wrapper">
+      <div class="cta-card slide-down-animation">
+        <h2 class="cta-title">Request a <span class="italics">Free Consultation</span></h2>
+        <div class="space-1rem"></div>
+        <p class="max-width-30rem">Discover how Messay can empower communication for you or your loved ones!</p>
+        <div class="space-2rem"></div>
+
+        <!-- COMMENTED OUT: reCAPTCHA moved here, OUTSIDE the form but inside the green card
+        <div class="g-recaptcha"
+             data-sitekey="THE RECAPTCHA SITE KEY HERE"
+             style="display: flex; justify-content: center; margin-bottom: .5rem;">
+        </div>
+        -->
+
+        <!-- <div class="sign-up-form w-form"> -->
+        <!-- COMMENTED OUT: Original form structure
+        <form action="https://api.staticforms.xyz/submit" method="post" id="newsletter-form">
+          <div class="sign-up-form-container" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+             Required hidden fields --
+            <input type="hidden" name="accessKey" value="YOUR STATIC FORMS ACCESS KEY HERE">
+            <input type="hidden" name="subject" value="New Newsletter Subscription from Messay">
+            <input type="hidden" name="redirectTo" value="thankyou.html">
+            <input type="hidden" name="replyTo" value="@">
+
+            Email input - clean and simple now --
+            <input class="sign-up-text-field w-input"
+                   maxlength="256"
+                   name="email"
+                   data-name="Newsletter Email"
+                   aria-label="Enter your email"
+                   placeholder="Enter your email"
+                   type="email"
+                   required
+                   style="width: 100%; max-width: 450px;">
+
+             Submit button --
+            <input type="submit"
+                   data-wait="Please wait..."
+                   class="button-subscribe w-button"
+                   value="Submit"
+                   style="width: 100%; max-width: 450px;">
+          </div>
+        </form>
+        -->
+
+        <!-- NEW: Contact Us button with custom class -->
+        <div class="slide-up-animation" style="display: flex; justify-content: center; align-items: center;">
+          <a href="https://messay.ndk-group.co.jp/en/feedback/"
+             target="_blank"
+             class="cta-contact-button">
+            Contact Us
+          </a>
+        </div>
+
+        <!-- COMMENTED OUT: Success and error messages
+        <div class="success-message-sign-up-form w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="error-message w-form-fail">
+          <div class="red-font">Oops! Something went wrong while submitting the form.</div>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+  <!--</div>-->
+</section>
+<section class="section background-primary">
+  <div class="w-layout-blockcontainer metrices padding-4-5rem w-container">
+    <div class="space-2rem"></div>
+    <div data-w-id="a8a7ab10-515b-b3cf-a409-904bb58a38dd" class="footer-top">
+      <div class="footer-block">
+        <a href="index.html" aria-current="page" class="footer-logo-link-wrapper w-nav-brand w--current"><img width="Auto" height="Auto" alt="" src="images/Messay-Logo-Text-1.png" loading="eager" srcset="images/Messay-Logo-Text-1-p-500.png 500w, images/Messay-Logo-Text-1-p-800.png 800w, images/Messay-Logo-Text-1.png 1015w" sizes="(max-width: 767px) 98vw, (max-width: 991px) 728px, 940px" class="footer-logo"></a>
+        <div class="socials-wrapper">
+          <a href="https://twitter.com/ndk_messay" target="_blank" class="w-inline-block"><img width="16" height="Auto" alt="" src="images/1.png" loading="eager" srcset="images/1-p-500.png 500w, images/1.png 512w" sizes="(max-width: 767px) 16px, (max-width: 991px) 2vw, (max-width: 1279px) 16px, 1vw" class="social-icon smaller"></a>
+        </div>
+        <p class="max-width-17vw">Talk With Your Eyes!</p>
+      </div>
+      <div class="footer-right-flex">
+        <div class="footer-wrapper">
+          <h5 class="heading-2">Pages</h5>
+          <div class="footer-link-wrapper">
+            <a href="index.html" aria-current="page" class="footer-link w--current">Home</a>
+            <a href="index.html" aria-current="page" class="footer-link move-down w--current">Home</a>
+          </div>
+          <div class="footer-link-wrapper">
+            <a href="game.html" class="footer-link">Game </a>
+            <a href="game.html" class="footer-link move-down">Game</a>
+          </div>
+          <div class="footer-link-wrapper">
+            <a href="https://messay.ndk-group.co.jp/en/privacy/" class="footer-link">Privacy Policy</a>
+            <a href="https://messay.ndk-group.co.jp/en/privacy/" class="footer-link move-down">Privacy Policy</a>
+          </div>
+          <div class="footer-link-wrapper">
+            <a href="https://messay.ndk-group.co.jp/en/eula/" class="footer-link">EULA</a>
+            <a href="https://messay.ndk-group.co.jp/en/eula/" class="footer-link move-down">EULA</a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <h5 class="heading-3">Main</h5>
+          <div class="footer-link-wrapper">
+            <a href="index.html#Contact-Form" class="footer-link">Contact Us</a>
+            <a href="index.html#Contact-Form" class="footer-link move-down">Contact Us</a>
+          </div>
+          <div class="footer-link-wrapper">
+            <a href="index.html#Expo-2025" class="footer-link">EXPO 2025</a>
+            <a href="index.html#Expo-2025" class="footer-link move-down">EXPO 2025</a>
+          </div>
+          <div class="footer-link-wrapper">
+            <a href="index.html#OurApps" class="footer-link">Our Apps</a>
+            <a href="index.html#OurApps" class="footer-link move-down">Our Apps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="a8a7ab10-515b-b3cf-a409-904bb58a3910" class="footer-line"></div>
+    <div data-w-id="a8a7ab10-515b-b3cf-a409-904bb58a3911" class="footer-bottom">
+      <a href="https://www.ndk-group.co.jp/" target="_blank" class="w-inline-block">
+        <p class="footer-bottom-text">NDK Ink. © 2025 All Rights Reserved. </p>
+      </a>
+    </div>
+  </div>
+</section>
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67ff56e7127c2396ca8b1406" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/webflow.js" type="text/javascript"></script>
 
 <!-- COMMENTED OUT: Original form submission JavaScript
 <script>
@@ -647,7 +697,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         // Check reCAPTCHA
         const recaptchaResponse = grecaptcha.getResponse();
         if (!recaptchaResponse) {
@@ -655,18 +705,18 @@ document.addEventListener('DOMContentLoaded', function() {
             errorMessageDiv.style.display = 'block';
             return;
         }
-        
+
         const formData = new FormData(form);
         // Add reCAPTCHA response to form data
         formData.append('g-recaptcha-response', recaptchaResponse);
-        
+
         const submitButton = form.querySelector('input[type="submit"]');
         const originalButtonValue = submitButton.value;
 
         // Reset messages
         errorMessageDiv.style.display = 'none';
         successMessageDiv.style.display = 'none';
-        
+
         // Disable button
         submitButton.value = 'Please wait...';
         submitButton.disabled = true;
@@ -693,7 +743,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             console.log('Response Data:', data);
-            
+
             // Check for successful submission
             if (data.message && data.message.includes('successfully')) {
                 // Success! Redirect to thank you page
