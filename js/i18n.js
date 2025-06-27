@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Internationalization core functionality with embedded translations
 class I18nManager {
+=======
+class I18n {
+>>>>>>> origin/main
 =======
 class I18n {
 >>>>>>> origin/main
@@ -9,6 +13,7 @@ class I18n {
     this.translations = {};
     this.defaultLanguage = 'en';
     this.supportedLanguages = ['en', 'ja'];
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.observers = [];
     this.isInitialized = false;
@@ -148,6 +153,8 @@ class I18n {
     if (!translations) {
       console.warn(`No translations found for language: ${this.currentLanguage}`);
 =======
+=======
+>>>>>>> origin/main
 
     // Initialize on DOM load
     if (document.readyState === 'loading') {
@@ -206,6 +213,9 @@ class I18n {
     const translation = this.translations[lang];
     if (!translation) {
       console.warn(`No translations found for language: ${lang}`);
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       return key;
     }
@@ -213,7 +223,11 @@ class I18n {
     // Navigate nested object using dot notation (e.g., "nav.home")
     const keys = key.split('.');
 <<<<<<< HEAD
+<<<<<<< HEAD
     let value = translations;
+=======
+    let value = translation;
+>>>>>>> origin/main
 =======
     let value = translation;
 >>>>>>> origin/main
@@ -225,15 +239,21 @@ class I18n {
 
     if (value === undefined) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.warn(`Translation key not found: ${key} for language: ${this.currentLanguage}`);
       // Try fallback to default language
       if (this.currentLanguage !== this.defaultLanguage) {
         return this.getFallbackTranslation(key);
 =======
+=======
+>>>>>>> origin/main
       console.warn(`Translation key not found: ${key} for language: ${lang}`);
       // Try fallback to default language
       if (lang !== this.defaultLanguage) {
         return this.getTranslation(key, this.defaultLanguage);
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       }
       return key; // Return the key itself if no translation found
@@ -242,6 +262,7 @@ class I18n {
     return value;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Get fallback translation
   getFallbackTranslation(key) {
@@ -278,6 +299,8 @@ class I18n {
     const metaData = this.getTranslation('meta');
     if (!metaData) return;
 =======
+=======
+>>>>>>> origin/main
   applyTranslations() {
     // Update meta tags
     this.updateMetaTags();
@@ -311,6 +334,9 @@ class I18n {
 
   updateMetaTags() {
     const metaData = this.getTranslation('meta');
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
     // Update page title
@@ -320,9 +346,15 @@ class I18n {
 
     // Update meta description
 <<<<<<< HEAD
+<<<<<<< HEAD
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && metaData.description) {
       metaDesc.setAttribute('content', metaData.description);
+=======
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription && metaData.description) {
+      metaDescription.content = metaData.description;
+>>>>>>> origin/main
 =======
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription && metaData.description) {
@@ -334,6 +366,7 @@ class I18n {
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle && metaData.title) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       ogTitle.setAttribute('content', metaData.title);
     }
 
@@ -341,18 +374,24 @@ class I18n {
     if (ogDesc && metaData.description) {
       ogDesc.setAttribute('content', metaData.description);
 =======
+=======
+>>>>>>> origin/main
       ogTitle.content = metaData.title;
     }
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription && metaData.description) {
       ogDescription.content = metaData.description;
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     }
 
     // Update Twitter tags
     const twitterTitle = document.querySelector('meta[property="twitter:title"]');
     if (twitterTitle && metaData.title) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       twitterTitle.setAttribute('content', metaData.title);
     }
@@ -425,6 +464,8 @@ class I18n {
 
   // Get current language
 =======
+=======
+>>>>>>> origin/main
       twitterTitle.content = metaData.title;
     }
 
@@ -572,11 +613,15 @@ class I18n {
   }
 
   // Utility method for external use
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   getCurrentLanguage() {
     return this.currentLanguage;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Get translation helper
   t(key) {
@@ -1577,6 +1622,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export for global access
 =======
+=======
+>>>>>>> origin/main
   // Utility method to get translation from external scripts
   t(key) {
     return this.getTranslation(key);
@@ -1587,5 +1634,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const i18n = new I18n();
 
 // Make it globally available
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 window.i18n = i18n;
