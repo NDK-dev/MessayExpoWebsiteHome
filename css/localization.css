@@ -1,0 +1,417 @@
+/* ========================================
+   LANGUAGE SWITCHER STYLES - IMPROVED
+   ======================================== */
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto; /* Push to the right side */
+  margin-right: 1rem; /* Space from menu button */
+  position: relative;
+  z-index: 1000;
+}
+
+.lang-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 45px;
+  text-align: center;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Japanese button specific styling */
+.lang-button[data-lang="ja"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 45px;
+}
+
+/* Subtle inner glow effect */
+.lang-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.lang-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: #222;
+}
+
+.lang-button:hover::before {
+  opacity: 1;
+}
+
+.lang-button.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.lang-button.active::before {
+  opacity: 0;
+}
+
+/* Alternative solid style for very transparent backgrounds */
+.lang-button.solid-style {
+  background: #333;
+  color: white;
+  border: 2px solid #333;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.lang-button.solid-style:hover {
+  background: #555;
+  border-color: #555;
+  transform: translateY(-1px);
+}
+
+.lang-button.solid-style.active {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+/* Glass morphism style alternative */
+.lang-button.glass-style {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.lang-button.glass-style:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.lang-button.glass-style.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Make sure it's visible on mobile */
+@media (max-width: 991px) {
+  .language-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 4rem; /* Space for hamburger menu */
+    margin: 0;
+  }
+
+  .lang-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 40px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Ensure it shows above other elements */
+.w-nav .language-switcher {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+/* Loading state during language switch */
+.language-switching {
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.language-switching .lang-button {
+  pointer-events: none;
+}
+
+/* ========================================
+   DARK BACKGROUND ADAPTATIONS
+   ======================================== */
+
+/* When placed over dark backgrounds */
+.dark-bg .lang-button,
+.lang-button.on-dark {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark-bg .lang-button:hover,
+.lang-button.on-dark:hover {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.dark-bg .lang-button.active,
+.lang-button.on-dark.active {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ========================================
+   DYNAMIC BACKGROUND DETECTION STYLES
+   ======================================== */
+
+/* These can be applied via JavaScript based on background detection */
+.lang-button.auto-light {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+.lang-button.auto-dark {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/* ========================================
+   LANGUAGE-SPECIFIC STYLES
+   ======================================== */
+
+/* Japanese specific styles */
+.lang-ja {
+  /* Japanese typography adjustments */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.7; /* Better line height for Japanese text */
+}
+
+.lang-ja h1,
+.lang-ja h2,
+.lang-ja h3,
+.lang-ja h4,
+.lang-ja h5,
+.lang-ja h6 {
+  line-height: 1.4;
+  font-weight: 600; /* Japanese text often looks better with slightly bolder weight */
+}
+
+.lang-ja .hero-title {
+  font-size: 3.5rem; /* Adjust hero title size for Japanese */
+  line-height: 1.2;
+}
+
+/* Adjust font sizes for Japanese text on mobile */
+@media (max-width: 767px) {
+  .lang-ja .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .lang-ja h2 {
+    font-size: 2rem;
+  }
+
+  .lang-ja h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Button text adjustments for Japanese */
+.lang-ja .button-text,
+.lang-ja .nav-link,
+.lang-ja .footer-link {
+  font-weight: 500;
+}
+
+/* Form elements for Japanese */
+.lang-ja input,
+.lang-ja textarea,
+.lang-ja select {
+  font-family: inherit;
+}
+
+/* Testimonial cards - better spacing for Japanese */
+.lang-ja .reviews-block p {
+  line-height: 1.8;
+}
+
+/* FAQ section adjustments */
+.lang-ja .faq-question {
+  line-height: 1.5;
+}
+
+/* Medal/Achievement titles */
+.lang-ja .uui-heading-tiny {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS PER LANGUAGE
+   ======================================== */
+
+/* Japanese navigation - might need more space */
+.lang-ja .nav-menu {
+  min-width: auto;
+}
+
+.lang-ja .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+/* Footer adjustments for Japanese */
+.lang-ja .footer-link {
+  line-height: 1.6;
+}
+
+/* ========================================
+   FORM VALIDATION MESSAGES
+   ======================================== */
+
+.form-error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Custom validation styling for different languages */
+.lang-ja .form-error-message {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+.i18n-loading::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Focus styles for language switcher */
+.lang-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .lang-button,
+  .language-switching {
+    transition: none;
+  }
+
+  .i18n-loading::before {
+    animation: none;
+  }
+
+  .lang-button::before {
+    transition: none;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .language-switcher {
+    display: none;
+  }
+}
+
+/* ========================================
+   DARK MODE SUPPORT
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  .lang-button:not(.on-dark):not(.auto-dark) {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  .lang-button:not(.on-dark):not(.auto-dark):hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .lang-button:not(.on-dark):not(.auto-dark).active {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Hide elements that shouldn't be translated */
+.no-translate {
+  translate: no; /* CSS property for browser translation tools */
+}
+
+/* Mark text that's being translated */
+.translating {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* Language-specific display utilities */
+.show-en { display: none; }
+.lang-en .show-en { display: initial; }
+
+.show-ja { display: none; }
+.lang-ja .show-ja { display: initial; }
+
+.hide-en { display: initial; }
+.lang-en .hide-en { display: none; }
+
+.hide-ja { display: initial; }
+.lang-ja .hide-ja { display: none; }
