@@ -1,13 +1,5 @@
 /* ========================================
-<<<<<<< HEAD
-<<<<<<< HEAD
    LANGUAGE SWITCHER STYLES - IMPROVED
-=======
-   LANGUAGE SWITCHER STYLES
->>>>>>> origin/main
-=======
-   LANGUAGE SWITCHER STYLES
->>>>>>> origin/main
    ======================================== */
 
 .language-switcher {
@@ -22,8 +14,6 @@
 
 .lang-button {
   padding: 0.5rem 1rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -33,28 +23,12 @@
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 600;
-=======
-=======
->>>>>>> origin/main
-  border: 2px solid #333;
-  background: transparent;
-  color: #333;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  font-weight: 500;
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
   min-width: 45px;
   text-align: center;
   font-family: inherit;
-<<<<<<< HEAD
-<<<<<<< HEAD
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -146,25 +120,6 @@
 .lang-button.glass-style.active {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.6);
-=======
-=======
->>>>>>> origin/main
-}
-
-.lang-button:hover {
-  background-color: #333;
-  color: white;
-  transform: translateY(-1px);
-}
-
-.lang-button.active {
-  background-color: #333;
-  color: white;
-  border-color: #333;
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
 }
 
 /* Make sure it's visible on mobile */
@@ -180,14 +135,8 @@
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
     min-width: 40px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
   }
 }
 
@@ -209,8 +158,6 @@
 }
 
 /* ========================================
-<<<<<<< HEAD
-<<<<<<< HEAD
    DARK BACKGROUND ADAPTATIONS
    ======================================== */
 
@@ -255,10 +202,6 @@
 }
 
 /* ========================================
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
    LANGUAGE-SPECIFIC STYLES
    ======================================== */
 
@@ -393,13 +336,7 @@
 .lang-button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
-<<<<<<< HEAD
-<<<<<<< HEAD
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
 }
 
 /* Reduced motion preferences */
@@ -412,16 +349,10 @@
   .i18n-loading::before {
     animation: none;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   .lang-button::before {
     transition: none;
   }
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
 }
 
 /* ========================================
@@ -439,8 +370,6 @@
    ======================================== */
 
 @media (prefers-color-scheme: dark) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   .lang-button:not(.on-dark):not(.auto-dark) {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -456,20 +385,6 @@
     background: rgba(0, 0, 0, 0.8);
     color: white;
     border-color: rgba(0, 0, 0, 0.9);
-=======
-=======
->>>>>>> origin/main
-  .lang-button {
-    color: #ffffff;
-  }
-
-  .lang-button.active {
-    background-color: #ffffff;
-    color: #000000;
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
   }
 }
 
